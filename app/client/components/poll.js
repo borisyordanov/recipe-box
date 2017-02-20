@@ -23,6 +23,23 @@ Template.poll.events({
       { $inc: action }
     );
 
+  },
+
+  'click h3': function(event) {
+
+    // prevent the default behavior
+    event.preventDefault();
+
+console.log($(event.currentTarget).next("a"));
+    $(event.currentTarget).next("a").show();
+
   }
 
 });
+
+Template.poll.rendered = function() {
+    if(!this._rendered) {
+      this._rendered = true;
+      $(".vote").hide();
+    }
+}
