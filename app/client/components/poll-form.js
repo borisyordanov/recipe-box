@@ -10,9 +10,9 @@ Template.pollForm.events({
     var newPoll = {
       question: event.target.question.value,
       choices: [
-        {  text: event.target.choice1.value, votes: 0 },
-        {  text: event.target.choice2.value, votes: 0 },
-        {  text: event.target.choice3.value, votes: 0 }
+        {  text: event.target.ingredient1.value, votes: event.target.ingredient1Amount.value },
+        {  text: event.target.ingredient2.value, votes: event.target.ingredient2Amount.value },
+        {  text: event.target.ingredient3.value, votes: event.target.ingredient3Amount.value }
       ]
     };    
      
