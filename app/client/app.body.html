@@ -13,9 +13,10 @@
 
   <!-- LOOP OVER POLLS AND SHOW EACH -->
   <div class="polls">
+  <!-- {{> editableText collection="polls" field="author"}} -->
       {{ #each polls }}
-          {{ >poll }}
-      {{ /each }}
+            {{ >poll }}
+        {{ /each }}
   </div>
   <!-- {{/if}} -->
 </body>

@@ -17,7 +17,7 @@ Template.pollForm.events({
     };    
      
     // create the new poll
-    Polls.insert(newPoll);
+    Recipes.insert(newPoll);
   }
 
 });

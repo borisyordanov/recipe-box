@@ -1,27 +1,24 @@
-import { Meteor } from 'meteor/meteor';
-
-// run this when the meteor app is started
 Meteor.startup(function() {
 
-  // if there are no polls available create sample data
+  // if there are no polls available
   if (Polls.find().count() === 0) {
 
     // create sample polls
     var samplePolls = [
       {
-        question: 'Is Meteor awesome?',
+        question: 'Recipe1',
         choices: [
-          { text: 'Of course!', votes: 0 },
-          { text: 'Eh', votes: 0 },
-          { text: 'No. I like plain JS', votes: 0 }
+          { text: 'Recipe1Ing1', votes: 100 },
+          { text: 'Recipe1Ing2', votes: 200 },
+          { text: 'Recipe1Ing3', votes: 300 }
         ]
       },
       {
-        question: 'Is CSS3 Flexbox great?',
+        question: 'Recipe2',
         choices: [
-          { text: '100% yes', votes: 0 },
-          { text: '200% yes', votes: 0 },
-          { text: '300% yes', votes: 0 }
+          { text: 'Recipe2Ing1', votes: 100 },
+          { text: 'Recipe2Ing2', votes: 200 },
+          { text: 'Recipe2Ing3', votes: 300 }
         ]
       }
     ];
@@ -30,7 +27,6 @@ Meteor.startup(function() {
     _.each(samplePolls, function(poll) {
       Polls.insert(poll);
     });
-
   }
 
 });
