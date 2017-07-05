@@ -1,0 +1,138 @@
+* {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently */
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #315481;
+    background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+.header {
+    background: #d2edf4;
+    background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+    padding: 20px 15px 15px 15px;
+    position: relative;
+}
+
+.header .title {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto 0 auto;
+    background: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.input-box {
+    margin: 5px 0;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    background: transparent;
+    width: 100%;
+    padding-right: 80px;
+    font-size: 1em;
+    border: 1px solid;
+}
+
+.input-box:focus {
+    outline: 0;
+}
+
+.recipes {
+    margin: 20px 0;
+    padding: 0;
+    background: white;
+}
+
+.action-btn {
+    font-weight: bold;
+    background: none;
+    font-size: 1em;
+    border: none;
+    position: relative;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: #eee solid 1px;
+    height: 20px;
+}
+
+.recipe:nth-of-type(1) {
+    border-top: #eee solid 1px;
+}
+
+.recipe .recipe-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.recipe .recipe-controls {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.recipe.checked {
+    color: #888;
+}
+
+.recipe.checked .recipe-info {
+    text-decoration: line-through;
+}
+
+.recipe.private {
+    background: #eee;
+    border-color: #ddd;
+}
+
+.toggle-private, .toggle-checked {
+    margin: 0 15px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
+}
